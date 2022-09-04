@@ -168,14 +168,14 @@ const newsSort = async () =>{
                 <!-- Button trigger modal -->
                 <button onclick="newsDetailsId('${key._id}')"type="button" class="btn btn-primary mt-5 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal"> News Details
                 </button>
-                
-               
              </div>
             </div>
-            </div>`
+            </div>
+            `
            
             newsItem.appendChild(div);
      }
   }
 }
+
 newsItemId('08');
