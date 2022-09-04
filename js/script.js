@@ -120,12 +120,12 @@ const newsDetails = news=>{
     publish.innerText= news.author.published_date;
 }
     
-// const toggleLoader= isLoading=>{
-//   const loader = document.getElementById('loader');
-//   if (isLoading) {
-//     loader.classList.remove('d-none')
-//   }else(
-//     loader.classList.add('d-none')
-//   )
-// }
+const toggleLoader= isLoading=>{
+  const loader = document.getElementById('loader');
+  if (isLoading) {
+    loader.classList.remove('d-none')
+  }else(
+    loader.classList.add('d-none')
+  )
+}
 newsItemId('08');
