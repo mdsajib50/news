@@ -22,7 +22,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="blog.html">Blog</a>
+                    <a class="nav-link" href="blog.html">Blog</a>
                   </li>
                 </ul>
               </div>
@@ -37,9 +37,13 @@
     </header>
     <!-- main contain -->
     <main>
-        <p aria-hidden="true">
-            <span class="placeholder col-10 placeholder-lg mx-auto"></span>
+        <div class="d-flex">
+          <p class="mx-3 mt-2">
+            <span id="news-count" class=" mx-auto badge rounded-pill text-bg-info"></span>
+            News Found
           </p>
+          <button onclick="newsSort()" type="button" class=" border-0">Most View</button>
+        </div>
         <div id="news-item" class="card mb-3 border border-0 mx-auto" style="max-width: 750px; height:max-content">
             </div>
 
@@ -48,10 +52,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-         <h5 class="modal-title" id="exampleModalLabel">${news.title}</h5>
+         <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <div id="image"></div>
         <p id="description"></p>
         <p id="author-name"><small></small></p>
         <p id="publish"><small></small></p>
