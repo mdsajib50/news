@@ -25,67 +25,67 @@ for (const category of categories) {
 }
 
 // news 
-// const newsItemId = async (id) =>{
-//   toggleLoader(true)
-//     try {
+const newsItemId = async (id) =>{
+  toggleLoader(true)
+    try {
     
-//         const url = `https://openapi.programming-hero.com/api/news/category/${id}`
-//        const res= await fetch(url)
-//         const newsData = await res.json()
-//         // console.log(newsData)
-//         newsDisplay(newsData.data);
+        const url = `https://openapi.programming-hero.com/api/news/category/${id}`
+       const res= await fetch(url)
+        const newsData = await res.json()
+        // console.log(newsData)
+        newsDisplay(newsData.data);
     
-//     } catch (err) {
-//         console.log(err)
-//     }
+    } catch (err) {
+        console.log(err)
+    }
     
-// }
-// const newsItem = document.getElementById('news-item');
+}
+const newsItem = document.getElementById('news-item');
 
-// const newsDisplay= news =>{
-//     newsItem.textContent='';
-//        if (news.length !='0') {
+const newsDisplay= news =>{
+    newsItem.textContent='';
+       if (news.length !='0') {
       
-//            news.forEach(value => {
-//               //  console.log(value);
+           news.forEach(value => {
+              //  console.log(value);
                
-//                const div = document.createElement('div');
+               const div = document.createElement('div');
                
-//                div.classList.add("row", "g-0", "border", "border-info", "rounded", "m-2");
-//               div.innerHTML =`
-//               <div class="col-md-4">
-//               <img src="${value.thumbnail_url}" class="img-fluid rounded-start mx-auto" alt="...">
-//             </div>
-//             <div class="col-md-8">
-//               <div class="card-body">
-//                 <h5 class="card-title">${value.title ? value.title: "Title not found"}</h5>
-//                 <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${value.details.slice(0,200)}</p>
-//                 <div class="d-flex float-start mt-2">
-//                 <img src="${value.author.img ? value.author.img: "Image not found"}" class="img rounded-5 mx-2" alt="author" style="width:80px; height:80px">
-//                 <div>
-//                 <p class="card-text mb-0 mt-3"><small>${value.author.name? value.author.name : 'Name not found' }</small></p>
-//                 <p class="card-text"><small class="text-muted">${value.author.published_date ? value.author.published_date : 'Date not found' }</small></p>
-//                 </div>
-//                 <div>
-//                 <p class="card-text text-end mt-4 px-3"><img src="image/icons8-eye-30.png"><small class="text-muted">${value.total_view ? value.total_view : 'Total view not found'}</small></p>
-//                 <!-- Button trigger modal -->
-//                 <button onclick="newsDetailsId('${value._id}')"type="button" class="btn btn-primary mt-5 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal"> News Details
-//                 </button>
+               div.classList.add("row", "g-0", "border", "border-info", "rounded", "m-2");
+              div.innerHTML =`
+              <div class="col-md-4">
+              <img src="${value.thumbnail_url}" class="img-fluid rounded-start mx-auto" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${value.title ? value.title: "Title not found"}</h5>
+                <p class="card-text" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${value.details.slice(0,200)}</p>
+                <div class="d-flex float-start mt-2">
+                <img src="${value.author.img ? value.author.img: "Image not found"}" class="img rounded-5 mx-2" alt="author" style="width:80px; height:80px">
+                <div>
+                <p class="card-text mb-0 mt-3"><small>${value.author.name? value.author.name : 'Name not found' }</small></p>
+                <p class="card-text"><small class="text-muted">${value.author.published_date ? value.author.published_date : 'Date not found' }</small></p>
+                </div>
+                <div>
+                <p class="card-text text-end mt-4 px-3"><img src="image/icons8-eye-30.png"><small class="text-muted">${value.total_view ? value.total_view : 'Total view not found'}</small></p>
+                <!-- Button trigger modal -->
+                <button onclick="newsDetailsId('${value._id}')"type="button" class="btn btn-primary mt-5 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModal"> News Details
+                </button>
                 
                
-//              </div>
-//             </div>
-//             </div>
-//               `
-//               newsItem.appendChild(div);
+             </div>
+            </div>
+            </div>
+              `
+              newsItem.appendChild(div);
 
-//           })
+          })
           
-//        } else{
-//         alert('Data not found')
-//     }
-//     toggleLoader(false)
-// };
+       } else{
+        alert('Data not found')
+    }
+    toggleLoader(false)
+};
 
 // const newsDetailsId = async id =>{
 //     try {
@@ -128,4 +128,4 @@ for (const category of categories) {
 //     loader.classList.add('d-none')
 //   )
 // }
-// newsItemId('08');
+newsItemId('08');
