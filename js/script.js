@@ -87,38 +87,38 @@ const newsDisplay= news =>{
     toggleLoader(false)
 };
 
-// const newsDetailsId = async id =>{
-//     try {
-//         const url = ` https://openapi.programming-hero.com/api/news/${id}`
-//        const res= await fetch(url)
-//         const newsData = await res.json()
-//         // const newsData.data = data
-//         newsData.data.forEach(data=>{
-//           console.log(data)
-//           newsDetails(data)
-//         })
+const newsDetailsId = async id =>{
+    try {
+        const url = ` https://openapi.programming-hero.com/api/news/${id}`
+       const res= await fetch(url)
+        const newsData = await res.json()
+        // const newsData.data = data
+        newsData.data.forEach(data=>{
+          console.log(data)
+          newsDetails(data)
+        })
 
-//     } catch (err) {
-//         console.log(err)
-//     }
+    } catch (err) {
+        console.log(err)
+    }
     
-// }
-// // newsDetailsId(id);
-// const newsModal = document.getElementById('exampleModal')
+}
+// newsDetailsId(id);
+const newsModal = document.getElementById('exampleModal')
 
-// const newsDetails = news=>{
-//         console.log(news);
+const newsDetails = news=>{
+        console.log(news);
         
-//         const titleDiv = document.getElementById('exampleModalLabel');
+        const titleDiv = document.getElementById('exampleModalLabel');
         
-//     titleDiv.innerText= news.title;
-//     const description=document.getElementById('description');
-//     description.innerText= news.details;
-//     const authorName = document.getElementById('author-name');
-//     authorName.innerText= news.author.name;
-//     const publish =document.getElementById('publish');
-//     publish.innerText= news.author.published_date;
-// }
+    titleDiv.innerText= news.title;
+    const description=document.getElementById('description');
+    description.innerText= news.details;
+    const authorName = document.getElementById('author-name');
+    authorName.innerText= news.author.name;
+    const publish =document.getElementById('publish');
+    publish.innerText= news.author.published_date;
+}
     
 // const toggleLoader= isLoading=>{
 //   const loader = document.getElementById('loader');
